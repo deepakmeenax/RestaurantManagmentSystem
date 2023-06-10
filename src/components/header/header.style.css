@@ -1,0 +1,30 @@
+.header {
+  max-width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.01px solid black;
+}
+
+.header a {
+  text-decoration: none;
+  margin: 0;
+}
+
+.header a h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #03c988;
+  font-weight: bolder;
+  line-height: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header p {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0;
+}

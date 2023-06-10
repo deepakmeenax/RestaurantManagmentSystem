@@ -1,0 +1,38 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 100%;
+  padding: 20px 30px;
+}
+
+.cardRow {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.graphRow {
+  color: #03c9878d;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.graphColumn {
+  width: 45%;
+  min-width: 500px;
+  padding: 20px;
+}
+
+.tableRow {
+  padding: 30px;
+}
