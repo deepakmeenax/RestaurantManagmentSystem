@@ -1,18 +1,19 @@
-import { FormGroup, FormLabel, TextField } from '@mui/material';
-import React from 'react';
-import MUIDataTable from 'mui-datatables';
-import { TData } from '../utils';
+import { FormGroup, FormLabel, TextField } from '@mui/material'
+import React from 'react'
+import MUIDataTable from 'mui-datatables'
+import { TData } from '../utils'
 
 function DataTable() {
   const columns = [
     {
+      label: 'Name',
       name: 'Name',
       options: {
         filter: false,
       },
     },
     {
-      label: 'Type',
+      label: 'Status',
       name: 'Type',
       options: {
         filter: true,
@@ -39,68 +40,68 @@ function DataTable() {
         customFilterListOptions: {
           render: (v) => {
             if (v[0] && v[1]) {
-              return [`Start Date: ${v[0]}`, `End Date: ${v[1]}`];
+              return [`Start Date: ${v[0]}`, `End Date: ${v[1]}`]
             } else if (v[0]) {
-              return `Start Date: ${v[0]}`;
+              return `Start Date: ${v[0]}`
             } else if (v[1]) {
-              return `End Date: ${v[1]}`;
+              return `End Date: ${v[1]}`
             }
-            return [];
+            return []
           },
           update: (filterList, filterPos, index) => {
             if (filterPos === 0) {
-              filterList[index].splice(filterPos, 1, '');
+              filterList[index].splice(filterPos, 1, '')
             } else if (filterPos === 1) {
-              filterList[index].splice(filterPos, 1);
+              filterList[index].splice(filterPos, 1)
             } else if (filterPos === -1) {
-              filterList[index] = [];
+              filterList[index] = []
             }
 
-            return filterList;
+            return filterList
           },
         },
         filterOptions: {
           names: [],
           logic(age, filters) {
-            let date = new Date(age);
-            let startDate, endDate;
+            let date = new Date(age)
+            let startDate, endDate
             if (filters[0]) {
-              startDate = new Date(filters[0]);
+              startDate = new Date(filters[0])
             }
             if (filters[1]) {
-              endDate = new Date(filters[1]);
+              endDate = new Date(filters[1])
             }
 
             if (filters[0] && filters[1]) {
-              return date < startDate || date > endDate;
+              return date < startDate || date > endDate
             } else if (filters[0]) {
-              return date < startDate;
+              return date < startDate
             } else if (filters[1]) {
-              return date > endDate;
+              return date > endDate
             }
-            return false;
+            return false
           },
           display: (filterList, onChange, index, column) => (
             <div>
               <FormLabel>Date Range</FormLabel>
               <FormGroup row>
                 <TextField
-                  type="date"
-                  placeholder="start date"
+                  type='date'
+                  placeholder='start date'
                   value={filterList[index][0] || ''}
                   onChange={(event) => {
-                    filterList[index][0] = event.target.value;
-                    onChange(filterList[index], index, column);
+                    filterList[index][0] = event.target.value
+                    onChange(filterList[index], index, column)
                   }}
                   style={{ width: '45%', marginRight: '5%', height: '20px' }}
                 />
                 <TextField
-                  type="date"
-                  placeholder="end date"
+                  type='date'
+                  placeholder='end date'
                   value={filterList[index][1] || ''}
                   onChange={(event) => {
-                    filterList[index][1] = event.target.value;
-                    onChange(filterList[index], index, column);
+                    filterList[index][1] = event.target.value
+                    onChange(filterList[index], index, column)
                   }}
                   style={{ width: '45%' }}
                 />
@@ -112,7 +113,7 @@ function DataTable() {
       },
     },
     {
-      name: 'Salary',
+      name: 'Payment',
       options: {
         filter: true,
         sort: true,
@@ -124,7 +125,7 @@ function DataTable() {
             'Higher wages(>200000)',
           ],
           logic(salary, filterVal) {
-            salary = salary.replace(/[^\d]/g, '');
+            salary = salary.replace(/[^\d]/g, '')
             const show =
               (filterVal.indexOf('Lower wages(<100000)') >= 0 &&
                 salary < 100000) ||
@@ -132,13 +133,13 @@ function DataTable() {
                 salary >= 100000 &&
                 salary < 200000) ||
               (filterVal.indexOf('Higher wages(>200000)') >= 0 &&
-                salary >= 200000);
-            return !show;
+                salary >= 200000)
+            return !show
           },
         },
       },
     },
-  ];
+  ]
 
   const options = {
     filter: true,
@@ -156,18 +157,18 @@ function DataTable() {
         color: 'primary',
         variant: 'outlined',
         className: 'testClass123',
-      };
+      }
     },
-  };
+  }
 
   return (
     <MUIDataTable
-      title={'ACME Employee Data'}
+      title={'Payments'}
       data={TData}
       columns={columns}
       options={options}
     />
-  );
+  )
 }
 
-export default DataTable;
+export default DataTable

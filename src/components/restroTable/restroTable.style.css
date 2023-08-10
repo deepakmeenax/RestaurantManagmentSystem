@@ -1,0 +1,102 @@
+.restroTableCon {
+  height: 150px;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.13);
+  position: relative;
+  min-width: 100px;
+  color: #fff;
+
+  background: linear-gradient(135deg, #343d45, rgb(72, 80, 87));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* gap: 32px; */
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.active {
+  border-right: 20px solid #e86a33;
+  color: #e86a33;
+}
+
+.occupied {
+  border-right: 20px solid #f8de22;
+  color: #f8de22;
+}
+
+.empty {
+  border-right: 20px solid #91c8e4;
+  color: #91c8e4;
+}
+
+.size4 {
+  width: 200px;
+}
+
+.size6 {
+  width: 220px;
+}
+
+.size8 {
+  width: 280px;
+}
+
+.size12 {
+  width: 320px;
+}
+
+.nameText {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+.numberText {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.statusText {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: inherit;
+}
+
+.row .MuiSvgIcon-root {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.detailsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.svgNumber {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.svgNumber .MuiSvgIcon-root {
+  width: 24px;
+  height: 24px;
+}
