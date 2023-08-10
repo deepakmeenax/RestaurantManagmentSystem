@@ -58,3 +58,13 @@
 .tableRow {
   padding: 30px;
 }
+
+@media (max-width: 650px) {
+  .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .cardRow {
+    width: 100%;
+  }
+}
