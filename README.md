@@ -1,11 +1,4 @@
-# Data Visualisation DashBoard
-
-![Card and Graph](https://github.com/deepakmeenax/DataDashboard/blob/main/1-img.png?raw=true "Card and Graph")
-![Graph and Table](https://github.com/deepakmeenax/DataDashboard/blob/main/2-img.png?raw=true "Graph and Table")
-![Table Date Range filter](https://github.com/deepakmeenax/DataDashboard/blob/main/4-img.png?raw=true "Table Date Range filter")
-![Table Business Type filter](https://github.com/deepakmeenax/DataDashboard/blob/main/5-img.png?raw=true "Table Business Type filter")
-![Table full search filter](https://github.com/deepakmeenax/DataDashboard/blob/main/6-img.png?raw=true "Table full search filter")
-
+# Restaurant Management Dashboard
 
 ## Available Scripts
 
